@@ -1,5 +1,7 @@
 pipeline {
-	agent any
+	agent{
+		name:ec2
+	}
 	
 	environment {
 	MSG = "Hello from Jenkins EC2"
