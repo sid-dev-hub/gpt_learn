@@ -17,6 +17,13 @@ pipeline {
                                 echo "Building project"
                         }
                 }
+		
+		stage("ShellChek"){
+			steps{
+				echo "Running shekk check"
+				sh 'shelllcheck bad_scr.sh || true'
+			}
+		}
 
 		stage("Test"){
                         steps{
